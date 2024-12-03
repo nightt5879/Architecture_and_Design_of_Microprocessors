@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Block Memory Generator module tb_top.u_ram_top.block_ram.inst.native_mem_module.blk_mem_gen_v8_4_8_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+=============================
+Test Begin
+TEST END
+$finish called at time : 621 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v" Line 96

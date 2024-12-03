@@ -1,9 +1,15 @@
+- [主要参考](#主要参考)
+- [实验结果](#实验结果)
+  - [exp1](#exp1)
+  - [exp2](#exp2)
+  - [exp3](#exp3)
+    - [同步RAM](#同步ram)
+    - [异步RAM](#异步ram)
+
 # 主要参考
 [龙芯设计](https://bookdown.org/loongson/_book3/)<br>
-[lab仓库](https://gitee.com/loongson-edu/cdp_ede_local)
-# 硬件环境
-vivado 24.1 <br>
-pynq-z2
+[lab仓库](https://gitee.com/loongson-edu/cdp_ede_local)<br>
+软件环境: vivado 24.1 <br>
 # 实验结果
 有些实验用的是龙芯自己的实验箱，所以很多exp只跑了仿真部分。
 ## exp1
@@ -121,4 +127,129 @@ exp2的仿真主要分为三个部分，下面逐一讲解<br>
 </p>
 <p align = "center">
 <i>part_2部分仿真</i>
+</p>
+
+## exp3
+这里分为三个部分，分别为同步RAM、异步RAM、对比两种RAM。<br>
+- [ ] 综合和实现后的时序结果与资源利用效率分析
+### 同步RAM
+
+`part0`
+```verilog
+	// Part 0 Begin
+	#10;
+	task_phase = 4'd0;
+	ram_wen    = 1'b0;
+	ram_addr   = 16'hf0;
+	ram_wdata  = 32'hffffffff;
+    #10;
+	ram_wen    = 1'b1;
+	ram_addr   = 16'hf0;
+	ram_wdata  = 32'h11223344;
+    #10;
+	ram_wen    = 1'b0;
+	ram_addr   = 16'hf1;
+	#10;
+	ram_wen    = 1'b0;
+	ram_addr   = 16'hf0;
+```
+这里可以分为四个部分，主要是体现同步RAM的特性。<br>
+第一部分：`ram_wen`没有使能，写入`ram_wdata`是没有作用的（后面可以验证看到）<br>
+第二部分：`ram_wen`使能同时写入`ram_wdata`，（此时特意设置和第一部分不同验证使能的效果）<br>
+第三部分：`ram_wen`没有使能，读取`ram_addr=f1`的值，可以发现是第二部分`ram_wen`使能后写入的数据（验证了同步RAM的数据在下一个周期）<br>
+第四部分：读取`ram_addr=f0`的值，在这个周期可以发现是`ram_addr=f1`的值（全为0），下一个周期开始才是f0的值<br>
+<p align="center">
+<img src ="./images/exp3/Figure1.jpg">
+</p>
+<p align = "center">
+<i>part_0部分仿真</i>
+</p>
+
+`part1`
+```verilog
+    // Part 1 Begin
+    #10;
+	task_phase = 4'd1;
+	ram_wen    = 1'b1;
+	ram_wdata  = 32'hff00;
+	ram_addr   = 16'hf0;
+	#10;
+	ram_wdata  = 32'hff11;
+	ram_addr   = 16'hf1;
+	#10;
+	ram_wdata  = 32'hff22;
+	ram_addr   = 16'hf2;
+	#10;
+	ram_wdata  = 32'hff33;
+	ram_addr   = 16'hf3;
+	#10;
+	ram_wdata  = 32'hff44;
+	ram_addr   = 16'hf4;
+	#10;
+```
+这个部分把使能打开，验证同步RAM的读操作读取的是上一个周期状态的数据<br>
+以这里的以第一部分举例，看到我们对`f0`写入了`0000ff00`但是这个周期读出的数据仍然是之前的`11223344`，后一个周期读取的才是`00000ff00`<br>
+后续的部分同理，自行查看理解即可。<br>
+<p align="center">
+<img src ="./images/exp3/Figure2.jpg">
+</p>
+<p align = "center">
+<i>part_1部分仿真</i>
+</p>
+
+`part2`
+```verilog
+	// Part 2 Begin
+	#10;
+	task_phase = 4'd2;
+	ram_wen    = 1'b0;
+	ram_addr   = 16'hf0;
+	ram_wdata  = 32'hffffffff;
+	#10;
+	ram_addr   = 16'hf1;
+	#10;
+	ram_addr   = 16'hf2;
+	#10;
+	ram_addr   = 16'hf3;
+	#10;
+	ram_addr   = 16'hf4;
+	#10;
+```
+这部分和前面的寄存器相似，读取验证一下RAM里面的数据<br>
+<p align="center">
+<img src ="./images/exp3/Figure3.jpg">
+</p>
+<p align = "center">
+<i>part_2部分仿真</i>
+</p>
+
+### 异步RAM
+这里和上面的内容测试代码完全一样所以我们只贴出最后的仿真结果<br>
+同时大概讲一下异步的RAM不一样的点在哪，后续会分析两者的时序结果与资源效率分析<br>
+`part0`
+可以看到这里在`fo`写入之后周期的末尾`rdata`更新了一次数据，后面的读取就能做到读取的就是当前周期的值而不是下一个周期的值<br>
+比如同步RAM中在写入后，读取输入`f0`地址，`rdata`的值就要在下一个周期才会更新，但是异步RAM的写入最后会直接”同步一次“`rdata`的数据，后续能做到读取“本周期的数据”<br>
+<p align="center">
+<img src ="./images/exp3/Figure4.jpg">
+</p>
+<p align = "center">
+<i>part_0部分仿真</i>
+</p>
+
+`part1`
+可以看到这里在每个写入之后，周期末尾都会”同步最新值“，也就是能做到本周期读取本周期的值。<br>
+<p align="center">
+<img src ="./images/exp3/Figure5.jpg">
+</p>
+<p align = "center">
+<i>part_1部分仿真</i>
+</p>
+
+`part3`
+这里就是同周期对应同周期，而不用到下一个周期。<br>
+<p align="center">
+<img src ="./images/exp3/Figure6.jpg">
+</p>
+<p align = "center">
+<i>part_1部分仿真</i>
 </p>

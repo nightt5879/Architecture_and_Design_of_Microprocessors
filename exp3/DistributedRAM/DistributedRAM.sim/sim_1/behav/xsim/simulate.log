@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+=============================
+Test Begin
+TEST END
+$finish called at time : 621 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v" Line 96

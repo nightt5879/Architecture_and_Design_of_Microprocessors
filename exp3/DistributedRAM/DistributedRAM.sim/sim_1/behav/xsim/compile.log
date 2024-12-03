@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/DistributedRAM/DistributedRAM.gen/sources_1/ip/distributed_ram/sim/distributed_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module distributed_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/distributed_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/DistributedRAM/DistributedRAM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

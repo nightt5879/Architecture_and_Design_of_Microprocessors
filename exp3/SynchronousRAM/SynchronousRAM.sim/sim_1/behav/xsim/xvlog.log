@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/SynchronousRAM/SynchronousRAM.gen/sources_1/ip/block_ram/sim/block_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/block_ram_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

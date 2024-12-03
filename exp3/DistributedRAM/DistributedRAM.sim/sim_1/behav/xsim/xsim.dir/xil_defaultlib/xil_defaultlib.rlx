@@ -1,0 +1,8 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/DistributedRAM/DistributedRAM.gen/sources_1/ip/distributed_ram/sim/distributed_ram.v,1733232280,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/distributed_ram_top.v,,distributed_ram,,,,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/DistributedRAM/DistributedRAM.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/distributed_ram_top.v,1733218141,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v,,ram_top,,,,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram_tb.v,1733227583,verilog,,,,tb_top,,,,,,,,
