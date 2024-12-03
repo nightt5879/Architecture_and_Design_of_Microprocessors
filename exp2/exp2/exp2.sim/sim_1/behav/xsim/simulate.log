@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+=============================
+Test Begin
+TEST END
+$finish called at time : 631 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp2/soures/rf_tb.v" Line 123

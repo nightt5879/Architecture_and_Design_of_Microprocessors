@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp2/soures/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp2/soures/rf_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
