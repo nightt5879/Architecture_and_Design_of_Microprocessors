@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/long_edu/cdp_ede_local/dc_env/exp1/scroller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scroller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/long_edu/cdp_ede_local/dc_env/exp1/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp1/exp1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
