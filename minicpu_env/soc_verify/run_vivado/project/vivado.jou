@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Dec  4 09:47:47 2024
+# Process ID: 31996
+# Current directory: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14588 E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\run_vivado\project\loongson.xpr
+# Log file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/vivado.log
+# Journal file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project\vivado.jou
+# Running On        :nightt_insider
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 5800U with Radeon Graphics         
+# CPU Frequency     :1896 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16487 MB
+# Swap memory       :19327 MB
+# Total Virtual     :35815 MB
+# Available Virtual :10716 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_pll] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_pll] -no_script -sync -force -quiet
+generate_target all [get_files  E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci]
+catch { config_ip_cache -export [get_ips -all clk_pll] }
+export_ip_user_files -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci]
+launch_runs clk_pll_synth_1 -jobs 16
+wait_on_run clk_pll_synth_1
+export_simulation -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci] -directory E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/sim_scripts -ip_user_files_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files -ipstatic_source_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/modelsim} {questa=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/questa} {riviera=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/riviera} {activehdl=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:dist_mem_gen:8.0 [get_ips  inst_ram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips inst_ram] -no_script -sync -force -quiet
+generate_target all [get_files  E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci]
+catch { config_ip_cache -export [get_ips -all inst_ram] }
+export_ip_user_files -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci]
+launch_runs inst_ram_synth_1 -jobs 16
+wait_on_run inst_ram_synth_1
+export_simulation -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci] -directory E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/sim_scripts -ip_user_files_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files -ipstatic_source_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/modelsim} {questa=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/questa} {riviera=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/riviera} {activehdl=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_top/soc_mini/cpu/inst_sram_addr}} 
+add_bp {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} 106
+remove_bps -file {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} -line 106
+add_bp {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} 86
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+run all
+run all
+close_sim

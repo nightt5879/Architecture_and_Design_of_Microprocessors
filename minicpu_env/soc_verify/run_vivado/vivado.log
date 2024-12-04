@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Dec  4 09:46:31 2024
+# Process ID: 25444
+# Current directory: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado
+# Command line: vivado.exe -mode tcl -source create_project.tcl
+# Log file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/vivado.log
+# Journal file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado\vivado.jou
+# Running On        :nightt_insider
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 5800U with Radeon Graphics         
+# CPU Frequency     :1896 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16487 MB
+# Swap memory       :19327 MB
+# Total Virtual     :35815 MB
+# Available Virtual :11242 MB
+#-----------------------------------------------------------
+source create_project.tcl
+# create_project -force loongson ./project -part xc7a200tfbg676-1
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project'
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 645.457 ; gain = 198.727
+# add_files -scan_for_includes [glob -nocomplain ../rtl/*.v]
+# add_files -scan_for_includes [glob -nocomplain ../rtl/*/*.v]
+# add_files -quiet [glob -nocomplain ../rtl/xilinx_ip/*/*.xci]
+# add_files -fileset sim_1 ../testbench
+# add_files -scan_for_includes ../../miniCPU
+# add_files -fileset constrs_1 -quiet ./constraints
+# set_property -name "top" -value "tb_top" -objects  [get_filesets sim_1]
+# set_property -name "xsim.simulate.log_all_signals" -value "1" -objects [get_filesets sim_1]
+Vivado% 

@@ -1,0 +1,14 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v,1733283032,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/regfile.v,,minicpu_top,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/regfile.v,1733218141,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v,,regfile,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/tools.v,1733218141,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v,,decoder_2_4;decoder_4_16;decoder_5_32;decoder_6_64,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/CONFREG/confreg.v,1733218141,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v,,confreg,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v,1733218141,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/tools.v,,soc_mini_top,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.v,1733294326,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/sim/inst_ram.v,,clk_pll,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll_clk_wiz.v,1733294326,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.v,,clk_pll_clk_wiz,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/sim/inst_ram.v,1733294338,verilog,,E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/CONFREG/confreg.v,,inst_ram,,,../../../../loongson.ip_user_files/ipstatic,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v,1733218141,verilog,,,,tb_top,,,../../../../loongson.ip_user_files/ipstatic,,,,,

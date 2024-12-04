@@ -5,6 +5,7 @@
   - [exp3](#exp3)
     - [同步RAM](#同步ram)
     - [异步RAM](#异步ram)
+  - [exp4](#exp4)
 
 # 主要参考
 [龙芯设计](https://bookdown.org/loongson/_book3/)<br>
@@ -131,7 +132,14 @@ exp2的仿真主要分为三个部分，下面逐一讲解<br>
 
 ## exp3
 这里分为三个部分，分别为同步RAM、异步RAM、对比两种RAM。<br>
-- [ ] 综合和实现后的时序结果与资源利用效率分析
+- [ ] 综合和实现后的时序结果与资源利用效率分析<br>
+不确定是芯片信号选择问题或者别的问题，implementation会报错设计为空，因为不是主要关注的部分，暂时选择不管。
+```
+[Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+[Common 17-69] Command failed: Placer could not place all instances
+```
+
 ### 同步RAM
 
 `part0`
@@ -245,11 +253,20 @@ exp2的仿真主要分为三个部分，下面逐一讲解<br>
 <i>part_1部分仿真</i>
 </p>
 
-`part3`
+`part2`
 这里就是同周期对应同周期，而不用到下一个周期。<br>
 <p align="center">
 <img src ="./images/exp3/Figure6.jpg">
 </p>
 <p align = "center">
-<i>part_1部分仿真</i>
+<i>part_2部分仿真</i>
+</p>
+
+## exp4
+没有板子没办法上班，原始的`tb.v`是只有按键设置的，和提到的可能有bug的功能无关，因为不是课程主要的部分，所以选择先这样了。<br>
+<p align="center">
+<img src ="./images/exp4/Figure1.jpg">
+</p>
+<p align = "center">
+<i>part_2部分仿真</i>
 </p>

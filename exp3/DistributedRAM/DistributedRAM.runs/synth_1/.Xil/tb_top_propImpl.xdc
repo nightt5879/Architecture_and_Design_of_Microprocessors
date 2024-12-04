@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:E:/robot/project/Architecture_and_Design_of_Microprocessors/exp3/sources/ram.xdc rfile:../../../../sources/ram.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 20.000 -name clk -waveform {0.000 10.000} [get_ports clk]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_input_delay -clock clk [expr 4.0] [all_inputs]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_output_delay -clock clk [expr 3.0] [all_outputs]
