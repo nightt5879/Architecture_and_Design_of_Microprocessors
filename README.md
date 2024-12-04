@@ -6,6 +6,9 @@
     - [同步RAM](#同步ram)
     - [异步RAM](#异步ram)
   - [exp4](#exp4)
+  - [单周期CPU设计](#单周期cpu设计)
+    - [5条指令单周期CPU](#5条指令单周期cpu)
+    - [20条指令单周期CPU](#20条指令单周期cpu)
 
 # 主要参考
 [龙芯设计](https://bookdown.org/loongson/_book3/)<br>
@@ -270,3 +273,31 @@ Resolution: Check if opt_design has removed all the leaf cells of your design.  
 <p align = "center">
 <i>part_2部分仿真</i>
 </p>
+
+## 单周期CPU设计
+### 5条指令单周期CPU
+这里使用的仓库故意留空了，让我们自己填写。<br>
+询问GPT得到了答案 + 仿真成功（前提是要自己手动去升级IP核心，具体可以搜索或者看我的[另一个仓库](https://github.com/nightt5879/FPGA?tab=readme-ov-file#34-%E5%AE%9E%E9%AA%8C-4)里面的Zedboard实验4部分的操作）<br>
+- [ ] 验证讲解单周期CPU的原理
+答案：（全都在minicpu_top.v里面）<br>
+```verilog
+// 对应 SW 存储指令
+assign inst_st_w   = op_31_26_d[6'h2b] & op_25_22_d[4'h2];//在这里实现inst_st_w指令的译码
+
+// 如果是 ADDI 指令，则选择立即数
+assign src2_is_imm   = inst_addi_w;//在这里实现立即数选择信号
+
+// 将 16 位立即数符号扩展为 32 位
+assign br_offs   = {{16{i16[15]}}, i16};//在这里完成br_offs信号的生成
+
+// 如果分支成立，跳转到目标地址，否则顺序执行
+assign nextpc    = br_taken ? br_target : pc + 4;//在这里实现nextpc信号的生成
+
+// 如果是立即数，则使用立即数，否则使用寄存器的值
+assign alu_src2 = src2_is_imm ? imm : rkd_value;//在这里实现alu_src2信号
+
+// 如果是加载指令，使用从内存读取的数据；否则使用 ALU 结果
+assign rf_wdata = res_from_mem ? data_sram_rdata : alu_result;//在这里完成写回寄存器值的选择
+```
+
+### 20条指令单周期CPU
