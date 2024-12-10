@@ -44,7 +44,7 @@ initial
 begin
     clk = 1'b0;
     resetn = 1'b0;
-    #2000;
+    #200;  //wating too long, change to 200
     resetn = 1'b1;
 end
 always #5 clk=~clk;
@@ -52,7 +52,7 @@ always #5 clk=~clk;
 initial 
 begin
     //在这里可以自定义测试输入序列
-    switch = ~(8'h4);
+    switch = ~(8'h9);  // using the 0000 1010 to test
 end
 
 soc_mini_top soc_mini

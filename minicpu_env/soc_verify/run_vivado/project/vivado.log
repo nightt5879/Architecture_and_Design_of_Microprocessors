@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Dec  4 09:47:47 2024
-# Process ID: 31996
+# Start of session at: Tue Dec 10 11:39:27 2024
+# Process ID: 31152
 # Current directory: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14588 E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\run_vivado\project\loongson.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21920 E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\run_vivado\project\loongson.xpr
 # Log file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/vivado.log
 # Journal file: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project\vivado.jou
 # Running On        :nightt_insider
@@ -19,7 +19,7 @@
 # Host memory       :16487 MB
 # Swap memory       :19327 MB
 # Total Virtual     :35815 MB
-# Available Virtual :10716 MB
+# Available Virtual :8079 MB
 #-----------------------------------------------------------
 start_gui
 open_project E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.xpr
@@ -40,148 +40,70 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2024.1/data/ip'.
-WARNING: [IP_Flow 19-2162] IP 'clk_pll' is locked:
-* IP definition 'Clocking Wizard (6.0)' for IP 'clk_pll' (customized with software release 2019.2) has a different revision in the IP Catalog.
-WARNING: [IP_Flow 19-2162] IP 'inst_ram' is locked:
-* IP definition 'Distributed Memory Generator (8.0)' for IP 'inst_ram' (customized with software release 2019.2) has a different revision in the IP Catalog.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1679.375 ; gain = 406.477
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1681.512 ; gain = 447.141
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-CRITICAL WARNING: [IP_Flow 19-4309] IP 'inst_ram' is locked, parameter file paths could not be changed. Please ensure the IP is unlocked and retry the SaveAs/Import operation.
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-ERROR: [Common 17-180] Spawn failed: No error
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'tb_top'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Simulation target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci
-E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci
-
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'E:/vivado/Vivado/2024.1/tps/boost_1_72_0'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'E:/vivado/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
 INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
-WARNING: [SIM-utils-65] Failed to find the IP component XML file for 'clk_pll' from IP_OUTPUT_DIR property! (file does not exist:'e:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xml')
-WARNING: [SIM-utils-52] IP component XML file does not exist: 'e:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xml'
-WARNING: [SIM-utils-65] Failed to find the IP component XML file for 'inst_ram' from IP_OUTPUT_DIR property! (file does not exist:'e:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xml')
-WARNING: [SIM-utils-52] IP component XML file does not exist: 'e:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xml'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/CONFREG/confreg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module confreg
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module minicpu_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module soc_mini_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/tools.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decoder_2_4
-INFO: [VRFC 10-311] analyzing module decoder_4_16
-INFO: [VRFC 10-311] analyzing module decoder_5_32
-INFO: [VRFC 10-311] analyzing module decoder_6_64
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: E:/vivado/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Running: E:/vivado/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <inst_ram> not found while processing module instance <inst_ram> [E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v:142]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1739.000 ; gain = 0.000
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-CRITICAL WARNING: [IP_Flow 19-4309] IP 'inst_ram' is locked, parameter file paths could not be changed. Please ensure the IP is unlocked and retry the SaveAs/Import operation.
-CRITICAL WARNING: [IP_Flow 19-4309] IP 'inst_ram' is locked, parameter file paths could not be changed. Please ensure the IP is unlocked and retry the SaveAs/Import operation.
-CRITICAL WARNING: [IP_Flow 19-4309] IP 'inst_ram' is locked, parameter file paths could not be changed. Please ensure the IP is unlocked and retry the SaveAs/Import operation.
-upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_pll] -log ip_upgrade.log
-Upgrading 'clk_pll'
-INFO: [Device 21-403] Loading part xc7a200tfbg676-1
-INFO: [Device 21-9227] Part: xc7a200tfbg676-1 does not have CEAM library.
-INFO: [IP_Flow 19-3422] Upgraded clk_pll (Clocking Wizard 6.0) from revision 4 to revision 14
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_pll'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/ip_upgrade.log'.
-upgrade_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2219.652 ; gain = 435.559
-export_ip_user_files -of_objects [get_ips clk_pll] -no_script -sync -force -quiet
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-ERROR: [Common 17-180] Spawn failed: No error
-generate_target all [get_files  E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_pll'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_pll'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_pll'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_pll'...
-catch { config_ip_cache -export [get_ips -all clk_pll] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_pll
-export_ip_user_files -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-launch_runs clk_pll_synth_1 -jobs 16
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_pll
-[Wed Dec  4 14:38:48 2024] Launched clk_pll_synth_1...
-Run output will be captured here: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.runs/clk_pll_synth_1/runme.log
-export_simulation -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xci] -directory E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/sim_scripts -ip_user_files_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files -ipstatic_source_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/modelsim} {questa=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/questa} {riviera=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/riviera} {activehdl=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:dist_mem_gen:8.0 [get_ips  inst_ram] -log ip_upgrade.log
-Upgrading 'inst_ram'
-INFO: [IP_Flow 19-3422] Upgraded inst_ram (Distributed Memory Generator 8.0) from revision 13 to revision 15
-WARNING: [IP_Flow 19-4706] Upgraded port 'a' width 5 differs from original width 6
-WARNING: [IP_Flow 19-4706] Upgraded port 'd' width 32 differs from original width 16
-WARNING: [IP_Flow 19-4706] Upgraded port 'spo' width 32 differs from original width 16
-WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'inst_ram'. These changes may impact your design.
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'inst_ram'...
-CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'inst_ram' has identified issues that may require user intervention. Please review the upgrade log 'e:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips inst_ram] -no_script -sync -force -quiet
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-generate_target all [get_files  E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inst_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'inst_ram'...
-ERROR: [Common 17-180] Spawn failed: No error
-catch { config_ip_cache -export [get_ips -all inst_ram] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: inst_ram
-export_ip_user_files -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci]
-launch_runs inst_ram_synth_1 -jobs 16
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: inst_ram
-[Wed Dec  4 14:38:58 2024] Launched inst_ram_synth_1...
-Run output will be captured here: E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.runs/inst_ram_synth_1/runme.log
-export_simulation -of_objects [get_files E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram.xci] -directory E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/sim_scripts -ip_user_files_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files -ipstatic_source_dir E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/modelsim} {questa=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/questa} {riviera=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/riviera} {activehdl=E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 5 for port 'a' [E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v:146]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+Stopped at time : 0 fs : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v" Line 86
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1769.121 ; gain = 30.352
+run all
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in tb_top.soc_mini.inst_ram.inst at time              2255000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'tb_top'
@@ -194,8 +116,76 @@ INFO: [SIM-utils-72] Using boost library from 'E:/vivado/Vivado/2024.1/tps/boost
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'E:/vivado/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
 INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/vivado/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 5 for port 'a' [E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v:146]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+Stopped at time : 0 fs : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v" Line 86
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1809.301 ; gain = 14.809
+run 3 us
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in tb_top.soc_mini.inst_ram.inst at time              2255000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
+run 3 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/vivado/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/vivado/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
@@ -222,7 +212,122 @@ INFO: [VRFC 10-311] analyzing module decoder_5_32
 INFO: [VRFC 10-311] analyzing module decoder_6_64
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/vivado/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 5 for port 'a' [E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v:146]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=9,CLKIN1...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_pll_clk_wiz
+Compiling module xil_defaultlib.clk_pll
+Compiling module xil_defaultlib.decoder_6_64
+Compiling module xil_defaultlib.decoder_4_16
+Compiling module xil_defaultlib.decoder_2_4
+Compiling module xil_defaultlib.decoder_5_32
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.minicpu_top
+Compiling module dist_mem_gen_v8_0_15.dist_mem_gen_v8_0_15(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_ram
+Compiling module xil_defaultlib.confreg
+Compiling module xil_defaultlib.soc_mini_top_default
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1825.309 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+Stopped at time : 0 fs : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v" Line 86
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1825.309 ; gain = 0.000
+remove_bps -file {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} -line 86
+run 3 us
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in tb_top.soc_mini.inst_ram.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/vivado/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/vivado/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/sim/inst_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/CONFREG/confreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module confreg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module minicpu_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module soc_mini_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/tools.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_2_4
+INFO: [VRFC 10-311] analyzing module decoder_4_16
+INFO: [VRFC 10-311] analyzing module decoder_5_32
+INFO: [VRFC 10-311] analyzing module decoder_6_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
@@ -276,103 +381,85 @@ source tb_top.tcl
 # log_wave -r /
 # run 1000ns
 WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in tb_top.soc_mini.inst_ram.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2273.398 ; gain = 33.145
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\regfile.v:]
-ERROR: [Common 17-180] Spawn failed: No error
-current_wave_config {Untitled 1}
-Untitled 1
-add_wave {{/tb_top/soc_mini/cpu/inst_sram_addr}} 
-add_bp {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} 106
-remove_bps -file {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} -line 106
-add_bp {E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/miniCPU/minicpu_top.v} 86
-step
-Stopped at time : 1005 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1005 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1010 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1010 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1015 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1015 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 313
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 311
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 338
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 339
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 340
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 359
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 328
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 438
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 443
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 462
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 482
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 484
-step
-Stopped at time : 1015 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 436
-step
-Stopped at time : 1020 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1020 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1025 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1025 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1030 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1030 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1035 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1035 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/testbench/mycpu_tb.v" Line 50
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 313
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 311
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 338
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 339
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 340
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 359
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 328
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 438
-step
-Stopped at time : 1035 ns : File "E:/vivado/Vivado/2024.1/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v" Line 443
-run all
-WARNING in tb_top.soc_mini.inst_ram.inst at time              2255000 ns: 
-Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
-run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 2373.230 ; gain = 0.000
-run all
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 3364.402 ; gain = 991.172
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1853.551 ; gain = 0.000
+run 3 us
 close_sim
-INFO: xsimkernel Simulation Memory Usage: 18596 KB (Peak: 18596 KB), Simulation CPU Usage: 18452 ms
 INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\rtl\soc_mini_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\soc_verify\testbench\mycpu_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\robot\project\Architecture_and_Design_of_Microprocessors\minicpu_env\miniCPU\minicpu_top.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/vivado/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/vivado/Vivado/2024.1/data/xsim/xsim.ini' copied to run dir:'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
+INFO: [SIM-utils-43] Exported 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/vivado/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 5 for port 'a' [E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/rtl/soc_mini_top.v:146]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/robot/project/Architecture_and_Design_of_Microprocessors/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in tb_top.soc_mini.inst_ram.inst at time               595000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_mini.inst_ram.inst is          31
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1853.551 ; gain = 0.000
+run 3 us

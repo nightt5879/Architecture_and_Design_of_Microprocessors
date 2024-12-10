@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp4/sources/show_sw.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module show_sw
-INFO: [VRFC 10-311] analyzing module show_num
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/robot/project/Architecture_and_Design_of_Microprocessors/exp4/sources/tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb

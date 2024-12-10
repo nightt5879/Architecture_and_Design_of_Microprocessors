@@ -12,3 +12,13 @@ memory_initialization_vector =
 5ffff2e4
 2990100e
 5c000300
+
+lui  $t0,0x0
+ori  $t0,$t0,0x400    # $t0=0x400
+lw   $t1,0($t0)       # 从0x400读switch数据到$t1
+
+lui  $t0,0x0
+ori  $t0,$t0,0x404    # $t0=0x404
+li   $t2,0x55         # 将0x55存入$t2
+sw   $t2,0($t0)       # 写入0x404地址，即写LED
+
