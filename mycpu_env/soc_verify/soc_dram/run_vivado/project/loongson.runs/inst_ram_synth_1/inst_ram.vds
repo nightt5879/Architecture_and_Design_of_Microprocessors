@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Dec 12 10:35:24 2024
+# Process ID: 26764
+# Current directory: E:/robot/project/Architecture_and_Design_of_Microprocessors/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1
+# Command line: vivado.exe -log inst_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inst_ram.tcl
+# Log file: E:/robot/project/Architecture_and_Design_of_Microprocessors/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1/inst_ram.vds
+# Journal file: E:/robot/project/Architecture_and_Design_of_Microprocessors/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1\vivado.jou
+# Running On        :nightt_insider
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 5800U with Radeon Graphics         
+# CPU Frequency     :1896 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16487 MB
+# Swap memory       :21474 MB
+# Total Virtual     :37962 MB
+# Available Virtual :16995 MB
+#-----------------------------------------------------------
+source inst_ram.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 644.648 ; gain = 200.211
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: inst_ram
+Command: synth_design -top inst_ram -part xc7a200tfbg676-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-1
+INFO: [Device 21-9227] Part: xc7a200tfbg676-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17128
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1566.297 ; gain = 452.125
+---------------------------------------------------------------------------------
