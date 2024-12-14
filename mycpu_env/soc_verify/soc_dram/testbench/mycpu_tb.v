@@ -115,7 +115,7 @@ reg [31:0] ref_wb_pc;
 reg [4 :0] ref_wb_rf_wnum;
 reg [31:0] ref_wb_rf_wdata;
 integer a;
-always @(posedge soc_clk)
+always @(negedge soc_clk)
 begin 
     #1;
     if(|debug_wb_rf_we && debug_wb_rf_wnum!=5'd0 && !debug_end && `CONFREG_OPEN_TRACE && resetn)
@@ -146,26 +146,27 @@ assign   ref_wb_rf_wdata_v[7 : 0] =   ref_wb_rf_wdata[7 : 0] & {8{debug_wb_rf_we
 reg debug_wb_err;
 always @(posedge soc_clk)
 begin
-    #2;
+    //#2;
     if(!resetn)
     begin
         debug_wb_err <= 1'b0;
     end
     else if(|debug_wb_rf_we && debug_wb_rf_wnum!=5'd0 && !debug_end && `CONFREG_OPEN_TRACE)
+    //对比时机与采样时机相同
     begin
         if (  (debug_wb_pc!==ref_wb_pc) || (debug_wb_rf_wnum!==ref_wb_rf_wnum)
-            ||(debug_wb_rf_wdata_v!==ref_wb_rf_wdata_v) )
+            ||(debug_wb_rf_wdata_v!==ref_wb_rf_wdata_v) )    //对比时机与采样时机相同
         begin
             $display("--------------------------------------------------------------");
             $display("[%t] Error!!!",$time);
             $display("    reference: PC = 0x%8h, wb_rf_wnum = 0x%2h, wb_rf_wdata = 0x%8h",
-                      ref_wb_pc, ref_wb_rf_wnum, ref_wb_rf_wdata_v);
+                    ref_wb_pc, ref_wb_rf_wnum, ref_wb_rf_wdata_v);
             $display("    mycpu    : PC = 0x%8h, wb_rf_wnum = 0x%2h, wb_rf_wdata = 0x%8h",
-                      debug_wb_pc, debug_wb_rf_wnum, debug_wb_rf_wdata_v);
+                    debug_wb_pc, debug_wb_rf_wnum, debug_wb_rf_wdata_v);
             $display("--------------------------------------------------------------");
-            debug_wb_err <= 1'b1;
+            debug_wb_err <= 1'b1;         //标记出错
             #40;
-            $finish;
+            $finish;              //对比出错，则结束仿真
         end
     end
 end
@@ -269,4 +270,5 @@ begin
 	    $finish;
 	end
 end
+
 endmodule
