@@ -1,14 +1,14 @@
 - [主要参考](#主要参考)
 - [实验结果](#实验结果)
-  - [exp1](#exp1)
-  - [exp2](#exp2)
-  - [exp3](#exp3)
-    - [同步RAM](#同步ram)
-    - [异步RAM](#异步ram)
-  - [exp4](#exp4)
-  - [单周期CPU设计](#单周期cpu设计)
-    - [5条指令单周期CPU](#5条指令单周期cpu)
-    - [20条指令单周期CPU](#20条指令单周期cpu)
+	- [exp1](#exp1)
+	- [exp2](#exp2)
+	- [exp3](#exp3)
+		- [同步RAM](#同步ram)
+		- [异步RAM](#异步ram)
+	- [exp4](#exp4)
+	- [单周期CPU设计](#单周期cpu设计)
+		- [5条指令单周期CPU](#5条指令单周期cpu)
+		- [20条指令单周期CPU](#20条指令单周期cpu)
 
 # 主要参考
 [龙芯设计](https://bookdown.org/loongson/_book3/)<br>
@@ -286,7 +286,7 @@ assign inst_st_w   = op_31_26_d[6'h2b] & op_25_22_d[4'h2];//在这里实现inst_
 
 // 如果是 ADDI 指令，则选择立即数
 assign src2_is_imm   = inst_addi_w;//在这里实现立即数选择信号
-
+PP
 // 将 16 位立即数符号扩展为 32 位
 assign br_offs   = {{16{i16[15]}}, i16};//在这里完成br_offs信号的生成
 
@@ -301,3 +301,76 @@ assign rf_wdata = res_from_mem ? data_sram_rdata : alu_result;//在这里完成�
 ```
 
 ### 20条指令单周期CPU
+这里的错误相对较多，主要感谢CSDN的[这篇文章](https://blog.csdn.net/weixin_46191137/article/details/134101452)<br>
+这里也简单的使用compare tool来大概说明一下大概的错误有哪些部分。<br>
+先贴一个运行的结果（可以直接替换两个v文件+更改一点alu.v的问题）<br>
+<p align="center">
+<img src ="./images/exp6/Figure1.jpg">
+</p>
+<p align = "center">
+<i>成功运行</i>
+</p>
+
+`alu.v`的问题：<br>
+```verilog
+// line 74
+// before change: assign or_result  = alu_src1 | alu_src2 | alu_result;
+assign or_result  = alu_src1 | alu_src2;
+// line 83-85
+//before change:assign sr64_result = {{32{op_sra & alu_src2[31]}}, alu_src2[31:0]} >> alu_src1[4:0]; //rj >> i5
+assign sr64_result = {{32{op_sra & alu_src1[31]}}, alu_src1[31:0]} >> alu_src2[4:0]; //rj >> i5
+
+//before change:assign sr_result   = sr64_result[30:0];
+assign sr_result   = sr64_result[31:0];
+```
+这里主要问题在`alu_src1`和`alu_src2`。这两个都是32位的输入信号，是两个操作数。<br>
+所以第一个的问题就比较显而易见了，`or`操作是两个32位的操作数使用`\`操作符号，而不是包括了`alu_result`的`or`操作。<br>
+第二个的错误在于移位操作写反了`alu_src1`和`alu_src2`，在CPU设计中，通常以第二个操作数作为移位的位数。<br>
+第三个的问题比较简单，32位宽度的操作数是[31:0]而不是[30:0]<br>
+
+`mycpu_top.v`的问题：<br>
+```verilog
+// line 113 add code
+wire [31:0] final_result;
+//line 195
+/*
+before change:
+assign imm = src2_is_4 ? 32'h4                      :
+             need_si20 ? {i20[19:0], 12'b0}         :
+//need_ui5 || need_si12{{20{i12[11]}}, i12[11:0]} ;
+*/
+assign imm = src2_is_4 ? 32'h4                      :
+             need_si20 ? {i20[19:0], 12'b0}         :
+             need_ui5  ? rk                         :
+            /*need_si12*/{{20{i12[11]}}, i12[11:0]} ;
+//line 218
+// before change: assign gr_we         = ~inst_st_w & ~inst_beq & ~inst_bne & ~inst_b & ~inst_bl;
+assign gr_we         = ~inst_st_w & ~inst_beq & ~inst_bne & ~inst_b;
+//line 248
+//before change: assign alu_src1 = src1_is_pc  ? pc[31:0] : rj_value;
+assign alu_src1 = src1_is_pc  ? pc : rj_value;
+//line 251
+/*
+before change
+alu u_alu(
+    .alu_op     (alu_op    ),
+    .alu_src1   (alu_src2  ),
+    .alu_src2   (alu_src2  ),
+    .alu_result (alu_result)
+    );
+*/
+alu u_alu(
+    .alu_op     (alu_op    ),
+    .alu_src1   (alu_src1  ),
+    .alu_src2   (alu_src2  ),
+    .alu_result (alu_result)
+    );
+// line 271
+// before change: assign debug_wb_rf_wen   = {4{rf_we}};
+assign debug_wb_rf_we    = {4{rf_we}};
+```
+第一个问题：没定义`final_result`，补全32的位的输入定义即可。<br>
+第二个问题：少定义了`need_u15`作为立即数rk的选择信号。<br>
+第三个问题：`inst_bl`并不参与寄存器写入，所以不应该在`gr_we`中。<br>
+第四个问题：写完整的`pc[31:0]`应该也是可以的，但是使用`pc`足够了。<br>
+第五、六个问题：主要都是tpyo，一个`alu_src12`写错了，一个是`debug_wb_rf_we`写错了。<br>
