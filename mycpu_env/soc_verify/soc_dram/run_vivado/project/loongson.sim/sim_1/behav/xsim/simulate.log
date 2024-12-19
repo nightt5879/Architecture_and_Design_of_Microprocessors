@@ -4537,4 +4537,7 @@ WARNING in tb_top.soc_lite.data_ram.inst at time            121845000 ns:
 Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
 WARNING in tb_top.soc_lite.data_ram.inst at time            121865000 ns: 
 Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
-=============
+==============================================================
+Test end!
+----PASS!!!
+$finish called at time : 121965 ns : File "E:/robot/project/Architecture_and_Design_of_Microprocessors/mycpu_env/soc_verify/soc_dram/testbench/mycpu_tb.v" Line 270
